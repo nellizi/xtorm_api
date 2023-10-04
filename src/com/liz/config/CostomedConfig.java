@@ -1,28 +1,25 @@
 package com.liz.config;
 
-import java.io.DataInputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.io.IOException;
 
 public class CostomedConfig {
 
-	ArrayList<String> properties = new ArrayList();
+//	ArrayList<String> properties = new ArrayList();
 	
-	public CostomedConfig() {
+	public CostomedConfig() throws IOException {
 
-		try {
-			DataInputStream dis = new DataInputStream(new FileInputStream("config/config.properties"));
-			File file = new File("config/config.properties");
-            //입력 스트림 생성
+		File file = new File("config/config.properties");
+		String[]properties = new String[5];
+            //입력 스트림 생성ㅁ
             FileReader filereader = new FileReader(file);
             int singleCh = 0;
             while((singleCh = filereader.read()) != -1){
             	String value = String.valueOf((char)singleCh);
                 System.out.print(value);
-                properties.add(value);
+                properties[0]=value;
+                System.out.println(properties);
             }
 //            System.out.println();
             filereader.close();
@@ -43,9 +40,7 @@ public class CostomedConfig {
 //			}
 //
 			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
 
 	}
 }
