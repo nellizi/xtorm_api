@@ -11,6 +11,8 @@ public class Config {
 	public String descr;
 	public String username;
 	public String password;
+	public String gateway;
+	public String localPath;
 
 	public Config() {
 
@@ -29,6 +31,8 @@ public class Config {
 		this.descr = prop.getProperty("descr");
 		this.username = prop.getProperty("username");
 		this.password = prop.getProperty("password");
+		this.gateway = prop.getProperty("gateway");
+		this.localPath = prop.getProperty("localPath");
 	}
 
 	
