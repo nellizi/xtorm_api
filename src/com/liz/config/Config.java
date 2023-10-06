@@ -13,6 +13,7 @@ public class Config {
 	public String password;
 	public String gateway;
 	public String localPath;
+	public String logPath;
 
 	public Config() {
 
@@ -33,6 +34,7 @@ public class Config {
 		this.password = prop.getProperty("password");
 		this.gateway = prop.getProperty("gateway");
 		this.localPath = prop.getProperty("localPath");
+		this.logPath = prop.getProperty("logPath");
 	}
 
 	

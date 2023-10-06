@@ -7,23 +7,23 @@ import java.io.IOException;
 public class CostomedConfig {
 
 //	ArrayList<String> properties = new ArrayList();
-	
+
 	public CostomedConfig() throws IOException {
 
 		File file = new File("config/config.properties");
-		String[]properties = new String[5];
-            //입력 스트림 생성ㅁ
-            FileReader filereader = new FileReader(file);
-            int singleCh = 0;
-            while((singleCh = filereader.read()) != -1){
-            	String value = String.valueOf((char)singleCh);
-                System.out.print(value);
-                properties[0]=value;
-                System.out.println(properties);
-            }
+		String[] properties = new String[5];
+
+		FileReader filereader = new FileReader(file);
+		int singleCh = 0;
+		while ((singleCh = filereader.read()) != -1) {
+			String value = String.valueOf((char) singleCh);
+			System.out.print(value);
+			properties[0] = value;
+			System.out.println(properties);
+		}
 //            System.out.println();
-            filereader.close();
-			
+		filereader.close();
+
 //			while (true) {
 //				
 //				String text = dis.readLine();
@@ -39,8 +39,6 @@ public class CostomedConfig {
 //				
 //			}
 //
-			
-
 
 	}
 }
